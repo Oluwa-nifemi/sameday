@@ -1,0 +1,126 @@
+.sidenavLink{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 25px;
+    height: 50px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.sidenavLinkActive{
+    background-color: #CEE6FF;
+}
+
+.sidenavLinkIcon{
+    width: 18px;
+    height: 18px;
+    color: #fcfcfc;
+    margin-right: 38px;
+    flex-shrink: 0;
+}
+
+.sidenavLinkActive .sidenavLinkIcon{
+    color: #2268d8;
+}
+
+.sidenavLinkText{
+    font-family: "Helvetica Neue",sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    color: #fcfcfc;
+}
+
+.sidenavLinkActive .sidenavLinkText{
+    color: #2268d8;
+}
+
+.sidenavLinkNumber,
+.sidenavLinkDropdownItemNumber{
+    width: 13px;
+    height: 13px;
+    background-color: #D80B0B;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Helvetica Neue',sans-serif;
+    font-size: 10px;
+    color: white;
+    margin-left: 25px;
+}
+
+.sidenavLinkDropdownWrapper{
+    position: relative;
+}
+
+.sidenavLinkDropdown{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+}
+
+.sidenavLinkDropdownIcon{
+    width: 10px;
+    color: white;
+    margin-left: auto;
+    display: inline-flex;
+}
+
+.sidenavLinkDropdownActiveBg{
+    position: absolute;
+    height: 50px;
+    background-color: #CEE6FF;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transition: 300ms;
+}
+
+.sidenavLinkDropdown .sidenavLinkIcon,
+.sidenavLinkDropdown .sidenavLinkText,
+.sidenavLinkDropdown .sidenavLinkDropdownIcon{
+    transition: 300ms;
+}
+
+.sidenavLinkDropdownBlue .sidenavLinkIcon,
+.sidenavLinkDropdownBlue .sidenavLinkText,
+.sidenavLinkDropdownBlue .sidenavLinkDropdownIcon{
+    color: #2268d8;
+}
+
+.sidenavLinkDropdownItems{
+    display: flex;
+    flex-direction: column;
+    transition: 300ms;
+    height: 0;
+    overflow: hidden;
+    transform-origin: top;
+}
+
+.sidenavLinkDropdownItem{
+    background-color: transparent;
+    height: 50px;
+    padding-left: 81px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.sidenavLinkDropdownItemActive{
+    color: #2268d8;
+}
+
+.sidenavLinkDropdownItemActive{
+    color: #2268d8;
+}
+
+.sidenavLinkDropdownItemNumber{
+    margin-left: 10px;
+}
