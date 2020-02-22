@@ -17,18 +17,22 @@ const SideNavLink = ({text, to, icon: Icon, number = 0, dropdownItems = [], loca
     if (dropdownItems.length > 0) {
         return (
             <div className={classes.sidenavLinkDropdownWrapper}>
-                <span
-                    className={classes.sidenavLinkDropdownActiveBg}
-                    style={{
-                        top: `${open ? openPosition : 0}px`
-                    }}
-                />
+                {
+                    openPosition !== 0 ? (
+                        <span
+                            className={classes.sidenavLinkDropdownActiveBg}
+                            style={{
+                                top: `${open ? openPosition : 0}px`
+                            }}
+                        />
+                    ) : null
+                }
                 <button
                     className={
                         classNames(
                             classes.sidenavLink,
                             classes.sidenavLinkDropdown,
-                            !open && classes.sidenavLinkDropdownBlue
+                            (!open && openPosition !== 0) && classes.sidenavLinkDropdownBlue
                         )}
                     onClick={() => setOpen(!open)}
                 >
