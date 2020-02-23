@@ -101,7 +101,12 @@ const SideNavLink = ({text, to, icon: Icon, number = 0, dropdownItems = [], loca
             <span className={classes.sidenavLinkText}>{text}</span>
             {
                 number > 0 ? (
-                    <span className={classes.sidenavLinkNumber}>{number}</span>
+                    <>
+                        <span className={classes.sidenavLinkNumber}>{number}</span>
+                        <span className={classNames(classes.sidenavLinkNumberNavClosed,navClosed && classes.sidenavLinkNumberNavClosedShow)}>
+                            {number}
+                        </span>
+                    </>
                 ) : null
             }
         </NavLink>
