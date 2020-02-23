@@ -4,7 +4,7 @@ import {Link, NavLink, withRouter} from "react-router-dom";
 import classNames from 'classnames'
 import {ReactComponent as DownIcon} from "../../../assets/icons/caret-down.svg";
 
-const SideNavLink = ({text, to, icon: Icon, number = 0, dropdownItems = [], location, className = '', closed, openNav}) => {
+const SideNavLink = ({text, to, icon: Icon, number = 0, dropdownItems = [], location, className = '', navClosed, openNav}) => {
     const [open, setOpen] = useState(false);
     const dropdownActive = useMemo(() => to.split('/')[0] === location.pathname.split('/'),[location.pathname,to]);
     const openPosition = useMemo(() => {
@@ -21,9 +21,12 @@ const SideNavLink = ({text, to, icon: Icon, number = 0, dropdownItems = [], loca
                 {
                     openPosition !== 0 ? (
                         <span
-                            className={classes.sidenavLinkDropdownActiveBg}
+                            className={classNames(
+                                classes.sidenavLinkDropdownActiveBg,
+                                navClosed && classes.sidenavLinkDropdownActiveBgSmall
+                            )}
                             style={{
-                                top: `${open ? openPosition : 0}px`
+                                top: `${(open && !navClosed) ? openPosition : 0}px`
                             }}
                         />
                     ) : null
@@ -34,7 +37,7 @@ const SideNavLink = ({text, to, icon: Icon, number = 0, dropdownItems = [], loca
                             classes.sidenavLink,
                             classes.sidenavLinkDropdown,
                             (!open && openPosition !== 0) && classes.sidenavLinkDropdownBlue,
-                            closed && classes.sidenavLinkSmall,
+                            navClosed && classes.sidenavLinkSmall,
                             dropdownActive && classes.sidenavLinkDropdownActive,
                             className
                         )}
@@ -59,7 +62,7 @@ const SideNavLink = ({text, to, icon: Icon, number = 0, dropdownItems = [], loca
                         )
                     }
                     style={{
-                        height: `${open ? (40 * dropdownItems.length) : 0}px`,
+                        height: `${(open && !navClosed) ? (40 * dropdownItems.length) : 0}px`,
                         transform: `scaleY(${open ? 1 : 0})`
                     }}
                 >
@@ -89,7 +92,7 @@ const SideNavLink = ({text, to, icon: Icon, number = 0, dropdownItems = [], loca
     }
     return (
         <NavLink
-            className={classNames(classes.sidenavLink,className,closed && classes.sidenavLinkSmall)}
+            className={classNames(classes.sidenavLink,className,navClosed && classes.sidenavLinkSmall)}
             to={to}
             activeClassName={classes.sidenavLinkActive}
             exact
