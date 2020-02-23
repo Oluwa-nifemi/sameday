@@ -6,6 +6,8 @@
     height: 50px;
     width: 100%;
     flex-shrink: 0;
+    transition: 300ms;
+    margin-bottom: 10px;
 }
 
 .sidenavLinkActive{
@@ -29,6 +31,7 @@
     font-weight: normal;
     font-size: 15px;
     color: #fcfcfc;
+    flex-shrink: 0;
 }
 
 .sidenavLinkActive .sidenavLinkText{
@@ -123,4 +126,19 @@
 
 .sidenavLinkDropdownItemNumber{
     margin-left: 10px;
+}
+
+.sidenavLinkSmall{
+    width: 50px;
+    padding: 0 16px;
+    margin: 0 9px 10px;
+    border-radius: 50%;
+}
+
+.sidenavLinkActive.sidenavLinkSmall, .sidenavLinkDropdownActive{
+    background-color: #97C8F8;
+}
+
+.sidenavLinkActive.sidenavLinkSmall .sidenavLinkIcon{
+    color: white;
 }

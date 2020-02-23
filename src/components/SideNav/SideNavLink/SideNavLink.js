@@ -4,8 +4,9 @@ import {Link, NavLink, withRouter} from "react-router-dom";
 import classNames from 'classnames'
 import {ReactComponent as DownIcon} from "../../../assets/icons/caret-down.svg";
 
-const SideNavLink = ({text, to, icon: Icon, number = 0, dropdownItems = [], location, className = ''}) => {
+const SideNavLink = ({text, to, icon: Icon, number = 0, dropdownItems = [], location, className = '', closed, openNav}) => {
     const [open, setOpen] = useState(false);
+    const dropdownActive = useMemo(() => to.split('/')[0] === location.pathname.split('/'),[location.pathname,to]);
     const openPosition = useMemo(() => {
         const activeIndex = dropdownItems.findIndex(({to}) => to === location.pathname);
         if(activeIndex !== -1){
@@ -32,9 +33,15 @@ const SideNavLink = ({text, to, icon: Icon, number = 0, dropdownItems = [], loca
                         classNames(
                             classes.sidenavLink,
                             classes.sidenavLinkDropdown,
-                            (!open && openPosition !== 0) && classes.sidenavLinkDropdownBlue
+                            (!open && openPosition !== 0) && classes.sidenavLinkDropdownBlue,
+                            closed && classes.sidenavLinkSmall,
+                            dropdownActive && classes.sidenavLinkDropdownActive,
+                            className
                         )}
-                    onClick={() => setOpen(!open)}
+                    onClick={() => {
+                        setOpen(!open);
+                        openNav();
+                    }}
                 >
                     <Icon className={classes.sidenavLinkIcon}/>
                     <span className={classes.sidenavLinkText}>{text}</span>
@@ -82,7 +89,7 @@ const SideNavLink = ({text, to, icon: Icon, number = 0, dropdownItems = [], loca
     }
     return (
         <NavLink
-            className={classNames(classes.sidenavLink,className)}
+            className={classNames(classes.sidenavLink,className,closed && classes.sidenavLinkSmall)}
             to={to}
             activeClassName={classes.sidenavLinkActive}
             exact
