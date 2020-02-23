@@ -12,10 +12,11 @@ const NavBar = () => {
         <nav className={classes.navBar}>
             <Logo className={classes.navBarLogo}/>
             <Line/>
-            <div>
+            <div className={classes.navBarSearchWrapper}>
                 <button className={classes.navBarSearch}>
                     <Search className={classes.navBarSearchIcon}/>
                 </button>
+                <input type="text" className={classes.navBarSearchInput} placeholder='Search'/>
             </div>
             <Line/>
             <div className={classes.navBarTextWrapper}>
