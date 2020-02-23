@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url("./assets/fonts/helvetica-neue/HelveticaNeue.ttf");
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-weight: 600;
+    src: url("./assets/fonts/helvetica-neue/HelveticaNeue Medium.ttf");
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url("./assets/fonts/nunito/NunitoSans-Regular.ttf");
+}
+
+a,button{
+    cursor: pointer;
+}
+
+*{
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
