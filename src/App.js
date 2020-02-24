@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.css";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import AllProducts from "./pages/AllProducts";
+import Orders from "./pages/Orders/Orders";
 
 function App() {
     return (
         <Router>
             <Switch>
-                <Route path={'/operations/production-house'} component={AllProducts}/>
-                <Route component={AllProducts}/>
+                <Route path={'/operations/production-house'} component={Orders}/>
+                <Route component={Orders}/>
             </Switch>
         </Router>
     );
