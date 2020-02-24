@@ -1,0 +1,284 @@
+
+.top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.topHeaderIcon{
+    margin-right: 10px;
+    width: 30px;
+    display: inline-flex;
+}
+
+.topHeader{
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 20px;
+    color: #030303;
+    margin-right: auto;
+}
+
+.topInputs{
+    display: flex;
+}
+
+.topInputWrapper{
+    background-color: #EEEEEE;
+    height: 38px;
+    padding: 0 12px 0 20px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 12px 200px 12px;
+    border-radius: 10px;
+    margin-left: 20px;
+    grid-column-gap: 10px;
+}
+
+.topInput{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    font-family: "Helvetica Neue", sans-serif;
+    color: #3D3D3E;
+    text-align: right;
+}
+
+.topInputClear{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 55px;
+}
+
+.tabs{
+    display: flex;
+    height: 100%;
+}
+
+.tab{
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1D1D1D;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid transparent;
+    padding: 0 0 15px 2.5%;
+}
+
+.tabActive{
+    border-color: #007AFE;
+    color: #007AFE;
+}
+
+.tabSplitLine{
+    height: 100%;
+    width: 1px;
+    background-color: #707070;
+    justify-self: flex-end;
+    margin-left: 15px;
+}
+
+.tabNumber{
+    color: #9B9B9B;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.tabNumberBg{
+    width: 20px;
+    height: 20px;
+    background-color: #D80B0B;
+    border-radius: 50%;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.printSheet{
+    font-size: 12px;
+    font-family: "Helvetica Neue", sans-serif;
+    color: black;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #939393;
+    border-radius: 8px;
+    margin-right: 40px;
+    font-weight: 600;
+    padding: 0 30px;
+    background-color: transparent;
+}
+
+.markComplete{
+    display: inline-grid;
+    align-items: center;
+    grid-template-columns: auto 10px;
+    grid-gap: 12px;
+    margin-right: 20px;
+}
+
+.markCompleteText{
+    color: #1A3A54;
+    font-weight: 600;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 16px;
+}
+
+.markCompleteIcon{
+    width: 100%;
+    color: #7E7E7E;
+}
+
+.saveButton{
+    width: 110px;
+    height: 36px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    color: #FCFCFC;
+    font-size: 12px;
+    background-color: #D0D0D0;
+    border: none;
+    border-radius: 8px;
+}
+
+.orderRows{
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+.tableRow{
+    display: grid;
+    grid-template-columns: 4% repeat(2,12%) 19% repeat(4,8.75%) 10% 7%;
+    align-items: center;
+    padding: 0 17px;
+}
+
+.tableRow > *{
+    padding-right: 10px;
+}
+
+.tableHeader{
+    height: 50px;
+    background-color: #EEEEEE;
+    margin-bottom: 14px;
+}
+
+.tableHeaderText{
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: black;
+}
+
+.tableRowText{
+    font-size: 12px;
+    font-family: "Helvetica Neue", sans-serif;
+    color: #000000;
+}
+
+.tableRowTextBold{
+    font-weight: bold;
+}
+
+.tableRowTextRed{
+    color: #FF0000;
+}
+
+.tableRowTextGray{
+    color: #C1C1C1;
+}
+
+.tableRowTextBlue{
+    color: #196BD8;
+}
+
+.tableRowTextLightGreen{
+    color: #009B2A;
+}
+
+.tableRowTextDarkGreen{
+    color: #1E8406;
+}
+
+.tableRowItemFlexCenter{
+    display: inline-flex;
+    align-items: center;
+}
+
+.tableRowItemGrid{
+    display: grid;
+    grid-row-gap: 10px;
+}
+
+.tableRowPreviewImage{
+    width: 45px;
+    margin-right: 25px;
+}
+
+.tableRowRushIcon{
+    margin-right: 10px;
+    width: 20px;
+}
+
+.tableRowItemColor{
+    padding: 10px 15px;
+    background-color: #529DED;
+    width: fit-content;
+    border-radius: 10px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.orderRow{
+    box-shadow: 0 3px 50px #00000007;
+    height: 80px;
+    transition: 300ms;
+    text-decoration: none;
+}
+
+.orderRow:hover{
+    box-shadow: 0 3px 25px #007BFF20;
+}
+
+.itemsPreview{
+    display: grid;
+    grid-template-columns: repeat(4,150px);
+    grid-column-gap: 20px;
+    padding: 30px 20px;
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    background-color: #1A3A54;
+    z-index: 99;
+    transition: 300ms;
+    transform: scale(0);
+    transform-origin: top left;
+}
+
+.tableRowPreviewImage:hover + .itemsPreview, .itemsPreview:hover{
+    transform: scale(1);
+}
+
+.itemsPreviewText{
+    font-family: "Nunito", sans-serif;
+    color: white;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.itemsPreviewImage{
+    width: 100%;
+}
