@@ -6,10 +6,11 @@ import {ReactComponent as Market} from "../../assets/icons/store.svg";
 import {ReactComponent as Notifications} from "../../assets/icons/notifications.svg";
 import {ReactComponent as Down} from "../../assets/icons/caret-down.svg";
 import classes from './NavBar.module.css'
+import classNames from 'classnames'
 
-const NavBar = () => {
+const NavBar = ({sidenavOpen}) => {
     return (
-        <nav className={classes.navBar}>
+        <nav className={classNames(classes.navBar,sidenavOpen && classes.navBarSideNavOpen)}>
             <Logo className={classes.navBarLogo}/>
             <Line/>
             <div className={classes.navBarSearchWrapper}>

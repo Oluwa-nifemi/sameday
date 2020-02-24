@@ -14,7 +14,9 @@ const Wrapper = ({children}) => {
                 setOpen={setNavOpen}
             />
             <div className={classes.mainContent}>
-                <NavBar/>
+                <NavBar
+                    sidenavOpen={navOpen}
+                />
                 <div className={classes.contentContainer}>
                     {children}
                 </div>
