@@ -5,3 +5,7 @@
 .mainContent{
     flex-grow: 1;
 }
+
+.contentContainer{
+    padding: 0 50px;
+}
