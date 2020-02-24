@@ -71,8 +71,7 @@ const navLinks = [
     }
 ];
 
-const SideNav = () => {
-    const [open,setOpen] = useState(false);
+const SideNav = ({open,setOpen}) => {
     return (
         <aside className={classNames(classes.sidenav, open && classes.sidenavOpen)}>
             <button onClick={() => setOpen(!open)} className={classes.sidenavClose}>
