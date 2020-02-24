@@ -9,6 +9,10 @@ import {ReactComponent as Clock} from "../../assets/icons/clock.svg";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import classNames from 'classnames'
 import smallShirt from '../../assets/images/small-shirt.png'
+import frontImage from '../../assets/images/front.png'
+import sideImage from '../../assets/images/side.png'
+import sideImage2 from '../../assets/images/side-2.png'
+import backImage from '../../assets/images/back.png'
 import {getProducts} from "../../data/products";
 import {Link} from "react-router-dom";
 import Checkbox from "../../components/Checkbox/Checkbox";
@@ -147,25 +151,25 @@ const OrdersRow = ({order, item, details, qty, colors, method, status, printType
             <img src={smallShirt} alt="Product Preview" className={classes.tableRowPreviewImage}/>
             <div className={classes.itemsPreview}>
                 <div>
-                    <img src={smallShirt} alt="" className={classes.itemsPreviewImage}/>
+                    <img src={frontImage} alt="" className={classes.itemsPreviewImage}/>
                     <span className={classes.itemsPreviewText}>
                         Front
                     </span>
                 </div>
                 <div>
-                    <img src={smallShirt} alt="" className={classes.itemsPreviewImage}/>
+                    <img src={backImage} alt="" className={classes.itemsPreviewImage}/>
                     <span className={classes.itemsPreviewText}>
                         Back
                     </span>
                 </div>
                 <div>
-                    <img src={smallShirt} alt="" className={classes.itemsPreviewImage}/>
+                    <img src={sideImage} alt="" className={classes.itemsPreviewImage}/>
                     <span className={classes.itemsPreviewText}>
                         Side
                     </span>
                 </div>
                 <div>
-                    <img src={smallShirt} alt="" className={classes.itemsPreviewImage}/>
+                    <img src={sideImage2} alt="" className={classes.itemsPreviewImage}/>
                     <span className={classes.itemsPreviewText}>
                         Side
                     </span>
