@@ -10,8 +10,26 @@
 }
 
 @font-face {
+    font-family: 'Helvetica Neue';
+    font-weight: bold;
+    src: url("./assets/fonts/helvetica-neue/Helvetica Neu Bold.ttf");
+}
+
+@font-face {
     font-family: 'Nunito';
     src: url("./assets/fonts/nunito/NunitoSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url("./assets/fonts/nunito/NunitoSans-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url("./assets/fonts/nunito/NunitoSans-SemiBold.ttf");
+    font-weight: 600;
 }
 
 a,button{
