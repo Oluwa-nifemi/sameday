@@ -1,18 +1,21 @@
 .sidenav{
     display: flex;
     flex-direction: column;
-    /*Padding left and right + width of icon*/
-    flex-basis: 68px;
     background-color: #007BFF;
     box-shadow: 0 3px 50px #0000001F;
     padding-top: 20px;
     height: 100vh;
     overflow: hidden;
     transition: 300ms;
+    position: fixed;
+    /*Padding left and right + width of icon*/
+    left: 0;
+    width: 68px;
+    z-index: 100;
 }
 
 .sidenavOpen{
-    flex-basis: 250px;
+    width: 250px;
     background-color: #196BD8;
 }
 
