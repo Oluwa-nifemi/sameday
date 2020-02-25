@@ -33,6 +33,7 @@
     opacity: 0;
     transition: 300ms;
     pointer-events: none;
+    z-index: 99;
 }
 
 .dropdownItemsActive{
