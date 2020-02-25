@@ -139,7 +139,7 @@ const Orders = () => {
 };
 
 const OrdersRow = ({order, item, details, qty, colors, method, status, printType, timeLeft, checked, index, checkProduct}) => (
-    <Link className={classNames(classes.tableRow, classes.orderRow)} to={`/operations/${order}`}>
+    <Link className={classNames(classes.tableRow, classes.orderRow)} to={`/operations/orders/${order}`}>
         <Checkbox checked={checked} onCheck={() => checkProduct(index)}/>
         <span className={classes.tableRowText}>
             {order}

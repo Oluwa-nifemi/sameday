@@ -9,7 +9,7 @@ function App() {
         <Router>
             <Switch>
                 <Route path={'/operations/production-house'} component={Orders}/>
-                <Route path={'/operation/:operationId'} component={Order}/>
+                <Route path={'/operations/orders/:operationId'} component={Order}/>
             </Switch>
         </Router>
     );
